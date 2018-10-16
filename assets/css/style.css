@@ -1,0 +1,51 @@
+body{
+    width: 100%;
+    align-content: center;
+}
+
+header{
+    text-align: center;
+}
+
+.questionRender{
+
+    background-color: black;
+    height: 400px;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.answerOne{
+width: 400px;
+float: left;
+margin-top: 10px;
+margin-right: 336px;
+margin-left:0px;
+text-align: center;
+}
+
+.answerTwo{
+width: 400px;
+float: right;
+margin-top: 10px;
+}
+
+.answerThree{
+
+width: 400px;
+float: left;
+margin-top: 10px;
+margin-right: 336px;
+margin-left:0px;
+text-align: center;
+
+}
+
+.answerFour{
+
+width: 400px;
+float: right;
+margin-top: 10px;
+
+}
