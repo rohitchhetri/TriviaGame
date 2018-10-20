@@ -59,7 +59,6 @@ $(document).ready(function () {
       "<p class='pCSS'>" + quizQuestion[quizQuestionCnt].o[1] + "</p>" +
       "<p class='pCSS'>" + quizQuestion[quizQuestionCnt].o[2] + "</p>" +
       "<p class='pCSS'>" + quizQuestion[quizQuestionCnt].o[3] + "</p>"
-
     )
   };
 
