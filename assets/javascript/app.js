@@ -19,34 +19,46 @@ $(document).ready(function () {
 
   var time = 15;
 
+ // var rightimg = "<img src="./images/right.jpg" />";
 
+  //var wrongimg = <img src="./images/yougotright.jpg" />;
   //Array of quizQuestionObjec with options and answer
 
   var quizQuestion = [
     {
       q: "Which of the following is correct about features of JavaScript?",
       o: ["JavaScript is a lightweight, interpreted programming language.", "JavaScript is designed for creating network-centric applications.", "JavaScript is complementary to and integrated with Java.", "All of the above."],
-      a: "JavaScript is complementary to and integrated with Java."
+      a: "JavaScript is complementary to and integrated with Java.",
+      img: "<img src='./assets/images/yougotright.jpg' />",
+      wrongimg: "<img src='./assets/images/right.jpg' />"
     },
     {
       q: "Which of the following is a valid type of function javascript supports?",
       o: ["named function", "anonymous function", "Both of the above.", "None of the above."],
-      a: "anonymous function"
+      a: "anonymous function",
+      img: "<img src='./assets/images/yougotright.jpg' />",
+      wrongimg: "<img src='./assets/images/right.jpg' />"
     },
     {
       q: "Which built-in method adds one or more elements to the end of an array and returns the new length of the array?",
       o: ["last()", "put()", "push", "None of the above"],
-      a: "put()"
+      a: "put()",
+      img: "<img src='./assets/images/yougotright.jpg' />",
+      wrongimg: "<img src='./assets/images/right.jpg' />"
     },
     {
       q: "Which built-in method returns the calling string value converted to lower case?",
       o: ["toSource()", "valueOf()", "toString()", "None of the above"],
-      a: "valueOf()"
+      a: "valueOf()",
+      img: "<img src='./assets/images/yougotright.jpg' />",
+      wrongimg: "<img src='./assets/images/right.jpg' />"
     },
     {
       q: "Which of the following function of String object returns the characters in a string between two indexes into the string?",
       o: ["slice()", "split()", "substr()", "substring()"],
-      a: "substr()"
+      a: "substr()",
+      img: "<img src='./assets/images/yougotright.jpg' />",
+      wrongimg: "<img src='./assets/images/right.jpg' />"
     },
   ];
 
@@ -70,7 +82,8 @@ $(document).ready(function () {
     $("#questionRender").html("<p>You got it ! </p>");
     usrCorrectAns++;
     var correctAns = quizQuestion[quizQuestionCnt].a;
-    $("#questionRender").append("<p>The answer was" + correctAns);
+    $("#questionRender").append("<p>The answer was " + correctAns + "<br />" + quizQuestion[quizQuestionCnt].img);
+   //console.log(rightimg);
     setTimeout(nextQ, 4000);
     quizQuestionCnt++;
   }
@@ -79,11 +92,11 @@ $(document).ready(function () {
   // Wrong Answer 
 
   function wrongAns() {
-    $("#questionRender").html("<p>You  got wrong");
+    $("#questionRender").html("<p>You  got wrong !");
     usrWrongAns++;
     var correctAns = quizQuestion[quizQuestionCnt].a;
-    $("#questionRender").append("<p>The answer was" + correctAns);
-    setTimeout(nextQ, 4000);
+    $("#questionRender").append("<p>The answer was " + correctAns + "<br />" + quizQuestion[quizQuestionCnt].wrongimg);
+    setTimeout(nextQ, 2000);
     quizQuestionCnt++;
 
   }
@@ -100,7 +113,7 @@ $(document).ready(function () {
 
       var correctAns = quizQuestion[quizQuestionCnt].a;
     $("#questionRender").append("<p>The answer was " + correctAns);
-    setTimeout(nextQ, 4000);
+    setTimeout(nextQ, 2000);
     quizQuestionCnt++;
     }
   }
