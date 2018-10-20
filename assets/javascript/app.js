@@ -119,7 +119,7 @@ function result() {
         var endmsg = "GoodLuck"
       }
       $("#gamescreen").html("<p>" + endmsg + "</p>" + "<p> You got "+ usrCorrectAns + "<p> Rights.</p>")
-      $("#questionRender").html("<p>You score " +usrCorrectAns+" Correct" + "Out of " + usrWrongAns +" wrong");
+      $("#questionRender").html("<p>You score " +usrCorrectAns+" Correct" + " & " + usrWrongAns +" Wrong Answer");
       reset();
       }
 
