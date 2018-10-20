@@ -66,11 +66,11 @@ $(document).ready(function () {
 
   // Rendring the questions and answer 
   function quizRender() {
-    $("#questionRender").append(quizQuestion[quizQuestionCnt].q +
-      "<p class='pCSS'>" + quizQuestion[quizQuestionCnt].o[0] + "</p>" +
-      "<p class='pCSS'>" + quizQuestion[quizQuestionCnt].o[1] + "</p>" +
-      "<p class='pCSS'>" + quizQuestion[quizQuestionCnt].o[2] + "</p>" +
-      "<p class='pCSS'>" + quizQuestion[quizQuestionCnt].o[3] + "</p>"
+    $("#questionRender").append(quizQuestion[quizQuestionCnt].q + "<br />" +
+      "<p class='pCSS'>" + quizQuestion[quizQuestionCnt].o[0] + "</p>" + "<br />" +
+      "<p class='pCSS'>" + quizQuestion[quizQuestionCnt].o[1] + "</p>" + "<br />" +
+      "<p class='pCSS'>" + quizQuestion[quizQuestionCnt].o[2] + "</p>"+ "<br />"  +
+      "<p class='pCSS'>" + quizQuestion[quizQuestionCnt].o[3] + "</p>" + "<br />" 
     )
   };
 
@@ -96,7 +96,7 @@ $(document).ready(function () {
     usrWrongAns++;
     var correctAns = quizQuestion[quizQuestionCnt].a;
     $("#questionRender").append("<p>The answer was " + correctAns + "<br />" + quizQuestion[quizQuestionCnt].wrongimg);
-    setTimeout(nextQ, 2000);
+    setTimeout(nextQ, 3000);
     quizQuestionCnt++;
 
   }
@@ -113,7 +113,7 @@ $(document).ready(function () {
 
       var correctAns = quizQuestion[quizQuestionCnt].a;
     $("#questionRender").append("<p>The answer was " + correctAns);
-    setTimeout(nextQ, 2000);
+    setTimeout(nextQ, 3000);
     quizQuestionCnt++;
     }
   }
@@ -144,7 +144,7 @@ function result() {
 
       if (time < 1) {
         clearInterval(clock);
-        //timesUp();
+        timesUp();
       }
       if (time > 0) {
         time--;
@@ -204,7 +204,7 @@ $("#questionRender").on("click",".pCSS",(function() {
   //alert("Click Event");
     var usrCorrectAns = $(this).text();
     if (usrCorrectAns === quizQuestion[quizQuestionCnt].a) {
-      console.log(usrCorrectAns);
+      //console.log(usrCorrectAns);
       clearInterval(clock);
       userCorrect();
     }
