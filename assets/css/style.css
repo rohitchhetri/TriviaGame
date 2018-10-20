@@ -7,9 +7,9 @@ header{
     text-align: center;
 }
 
-.questionRender{
+#questionRender{
 
-    background-color: black;
+    background-color: gray;
     height: 400px;
     text-align: center;
     color: white;
@@ -23,12 +23,14 @@ margin-top: 10px;
 margin-right: 336px;
 margin-left:0px;
 text-align: center;
+background-color: blue;
 }
 
 .answerTwo{
 width: 400px;
 float: right;
 margin-top: 10px;
+background-color: blue;
 }
 
 .answerThree{
@@ -39,7 +41,7 @@ margin-top: 10px;
 margin-right: 336px;
 margin-left:0px;
 text-align: center;
-
+background-color: blue;
 }
 
 .answerFour{
@@ -47,5 +49,24 @@ text-align: center;
 width: 400px;
 float: right;
 margin-top: 10px;
+background-color: blue;
 
+}
+
+h3{
+    color: rgb(0, 0, 0);
+    background-color: wheat;
+    text-align: center
+}
+
+.pCSS{
+    text-align: center;
+	border: groove 2px black;
+	border-radius: 5%;
+	margin: 0 35%;
+}
+
+.pCSS:hover{
+    background-color: green;
+    color: white;
 }
